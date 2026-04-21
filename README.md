@@ -185,7 +185,7 @@ machine.Update();
 watchdog.Update();
 
 Console.WriteLine("\n--- Frame 2 (Simulating Player Damage) ---");
-context.PlayerHealth = 0; // Player takes fatal damage
+context.PlayerHealth = 0; // Player takes fatal damage and healh drops to 0
 machine.Update(); // Updates CombatState
 // Watchdog detects health <= 0, fires PlayerDiedInterrupt, instantly switching to MissionFailedState
 watchdog.Update();
